@@ -1,0 +1,67 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.4.30"
+
+    ext {
+
+        // global variables
+        compile_sdk_version = 29
+        kotlin_version = '1.4.21'
+        min_sdk_version = 21
+
+
+        def annotations_version = '1.1.0'
+        def coroutines_android_version = '1.4.2'
+        def gson_version = '2.8.6'
+        def lifecycle_version = '2.1.0'
+        def livedata_version = '2.2.0-rc02'
+        def retrofit_gson_version = '2.6.2'
+        def retrofit_version = '2.6.2'
+
+
+        libraries = [
+                // Kotlin standard library
+                "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+
+                // Coroutines
+                "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_android_version",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutines_android_version}",
+
+                // ViewModel and LiveData
+                "androidx.lifecycle:lifecycle-extensions:$lifecycle_version",
+                "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_version",
+                "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+
+                // network & serialization
+                "com.google.code.gson:gson:$gson_version",
+                "com.squareup.retrofit2:converter-gson:$retrofit_gson_version",
+                "com.squareup.retrofit2:retrofit:$retrofit_version",
+
+                // threading
+                "androidx.annotation:annotation:$annotations_version"
+        ]
+    }
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

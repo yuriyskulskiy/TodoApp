@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TestAppGL</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="add_task_description">Add task description</string>
+    <string name="add">Add</string>
+    <string name="warning_not_empty">task description can not be empty</string>
+    <string name="faile_to_load_from_internet">Failed to load tasks from internet</string>
+    <string name="not_completed">#ffffff</string>
+    <string name="completed">#D3F4D3</string>
+</resources>
